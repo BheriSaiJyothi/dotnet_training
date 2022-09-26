@@ -1,0 +1,427 @@
+1st 
+
+
+using System;
+class HelloWorld {
+  static void Main() {
+    string[] letters = new string[3];
+    int i=0;
+    for(i=0;i<3;i++)
+    {
+        letters[i]=Console.ReadLine();
+    }
+    for(i=2;i>=0;i--)
+    {
+        Console.WriteLine(letters[i]);
+    }
+    
+  }
+}
+
+2 nd 
+
+
+
+using System;
+class HelloWorld {
+  static void Main() {
+    double radius=double.Parse(Console.ReadLine());
+    double perimeter;
+    double area;
+    perimeter = (2*3.14 * radius);
+    area = (3.14 * radius * radius);
+    Console.WriteLine(perimeter + "," + area);
+    
+  }
+}
+
+
+
+
+3 rd 
+
+
+
+using System;
+class HelloWorld {
+  static void Main() {
+      Console.WriteLine(" enter the distance in kilometers");
+    int distance=int.Parse(Console.ReadLine());
+    Console.WriteLine("  enter the time in  hours");  
+    int time = int.Parse(Console.ReadLine());
+   float  speed;
+    speed=(float)distance/time;
+    float  speedinmiles=(float)distance/(time*1000);
+    Console.WriteLine(" the speed in kilometer per hour is " + speed);
+    Console.WriteLine("  the speed in miles per hour " + speedinmiles);
+    
+  }
+}
+
+
+
+4 th
+
+
+using System;
+class HelloWorld {
+  static void Main() {
+      Console.WriteLine("enter the number 1 : : ");
+    int i=int.Parse(Console.ReadLine());
+    Console.WriteLine("  enter the second number ");  
+    int j = int.Parse(Console.ReadLine());
+  if((i%2==0 && (j%2==0)) || (i%2!=0 && j%2!=0))
+  {
+      Console.WriteLine(" the true");
+  }
+  else
+  {
+      Console.WriteLine(" the false");
+  }
+    
+  }
+}
+
+
+
+5 th 
+
+
+
+
+
+
+
+using System;
+class HelloWorld {
+  static void Main() {
+      Console.WriteLine(" enter the year number : : ");
+    int i=int.Parse(Console.ReadLine());
+    if(i%4==0)
+    {
+        if( i%100!=0 || i%400==0)
+        {
+            Console.WriteLine(" the leap year s u ");
+        }
+         else
+        {
+            Console.WriteLine(" the non leap year g i ");
+        }
+    }
+       
+    
+     else
+        {
+            Console.WriteLine(" the non leap year g i ");
+        }
+  }
+}
+
+
+
+6 th 
+
+
+
+using System;
+class HelloWorld {
+  static void Main() {
+      Console.WriteLine(" enter the height number : : ");
+    int i=int.Parse(Console.ReadLine());
+    if(i<135)
+    {
+        Console.WriteLine(" the short one");
+    }
+    else if (i>=135 && i<=180)
+    {
+        Console.WriteLine(" the average one");
+    }
+    else
+    {
+        Console.WriteLine(" the tall one");
+    }
+  }
+}
+
+
+
+7 th 
+
+
+
+using System;
+class HelloWorld {
+  static void Main() {
+      Console.WriteLine(" enter the maths number : : ");
+    int i=int.Parse(Console.ReadLine());
+    Console.WriteLine( " enter the physics marks :");
+    int j = int. Parse(Console.ReadLine());
+    Console.WriteLine( " enter the chemistry marks");
+    int o= int.Parse(Console.ReadLine());
+    
+    if((i>=65 && j>=55 && o>=50 && (i+j+o)>=180) || ( i+j>=140 && i+o >=140 && o+j >=140))
+    {
+        Console.WriteLine(" yess");
+    }
+    else
+    {
+        Console.WriteLine(  " jno");
+    }
+    
+    
+  }
+}
+
+
+
+8 th 
+
+
+
+
+
+
+
+using System;
+class HelloWorld {
+  static void Main() {
+      Console.WriteLine(" enter the value number : : ");
+    int i=int.Parse(Console.ReadLine());
+    Console.WriteLine( " enter the  value number  :");
+    int j = int. Parse(Console.ReadLine());
+    Console.WriteLine( " enter the value number  ");
+    int o= int.Parse(Console.ReadLine());
+    if(i+j>=o || j+o >=i || i+o >= j)
+    {
+    if(i==j && i==o)
+    {
+        Console.WriteLine(" the equilateral  ");
+    }
+    else if ( i==j || j==o || i==o)
+    {
+        Console.WriteLine( " the isosceles");
+    }
+    else
+    {
+        Console.WriteLine( " the scalane ");
+    }
+  }
+  }
+}
+
+
+
+
+
+9 th
+
+
+using System;
+namespace ConsoleApp1
+{
+    class hwps
+    {
+        static void Main()
+        {
+            int g = Convert.ToInt32(Console.ReadLine());
+            int[] i = new int[g];
+            int j;
+            int[] t = new int[g];
+            for (j = 0; j < g; j++)
+            {
+                i[j] = Convert.ToInt32(Console.ReadLine());
+            }
+            for (j = 0; j < g; j++)
+            {
+                t[j] = i[j];
+            }
+            for (j = 0; j < g; j++)
+            {
+                Console.WriteLine(t[j]);
+            }
+        }
+    }
+}
+
+
+
+
+10 th 
+
+
+
+
+using System;
+namespace ConsoleApp1
+{
+    class hwps
+    {
+        static void Main()
+        {
+            int g = Convert.ToInt32(Console.ReadLine());
+            int[] i = new int[g];
+            int j;
+            int[] t = new int[g];
+            for (j = 0; j < g; j++)
+            {
+                i[j] = Convert.ToInt32(Console.ReadLine());
+            }
+            int a1 = 0, a2 = 0;
+            int[] array1 = new int[g];
+            for(j=0;j<g;j++)
+            {
+
+                if (i[j]%2==0)
+                {
+                    array1[a1] = i[j];
+                    a1++;
+                }
+                else
+                {
+                    t[a2]=i[j];
+                    a2 = a2 + 1;
+                }
+            }
+            for (j=0; j <   a1; j++)
+            {
+                Console.WriteLine(array1[j]);
+            }
+            for (j=0; j <a2; j++)
+            {
+                Console.WriteLine(t[j]);
+            }
+
+
+
+        }
+    }
+}
+
+
+
+11 th
+
+
+
+
+using System;
+namespace ConsoleApp1
+{
+    class hwps
+    {
+        static void Main()
+        {
+            string k =Console.ReadLine();
+            int i = 0;
+            for(i=k.Length-1;i>=0;i--)
+            {
+                Console.WriteLine(k[i]);
+            }
+            
+
+
+
+
+        }
+    }
+}
+
+
+
+12 th
+
+
+
+using System;
+namespace ConsoleApp1
+{
+    class hwps
+    {
+        static void Main()
+        {
+            string k =Console.ReadLine();
+            int i = 0;
+            string f = "";
+            for(i=0;i<k.Length;i++)
+            {
+                if (Char.IsUpper(k[i]))
+                {
+                    f=f+    Char.ToLowerInvariant(k[i]);
+                }
+
+                if (Char.IsLower(k[i]))
+                {
+                    f = f + Char.ToUpperInvariant(k[i]);
+                }
+
+              
+            }
+            Console.WriteLine(f);
+
+
+
+        }
+    }
+}
+
+
+13 th
+
+
+
+using System;
+namespace ConsoleApp1
+{
+    class hwps
+    {
+        static void Main()
+        {
+            int i = Convert.ToInt32(Console.ReadLine());
+            int[] jyo1 = new int[i];
+            int[] jyo2 = new int[i];
+            int o = 0;
+            int y = 0;
+            int t;
+            int[] array1 = new int[2 * i];
+            int j;
+            for(t = 0; t < i; t++)
+            {
+                jyo1[t] = Convert.ToInt32(Console.ReadLine());
+            }
+            for (t = 0; t < i; t++)
+            {
+                jyo2[t] = Convert.ToInt32(Console.ReadLine());
+            }
+            for(t = 0; t < i; t++)
+      {
+                array1[y]=jyo1[t];
+                y = y + 1;
+            }
+            for (t = 0; t < i; t++)
+            {
+                array1[y] = jyo2[t];
+                y = y + 1;
+            }
+
+            for(o=0;o<y;o++)
+            {
+                for(j=o+1;j<y;j++)
+                {
+                    if (array1[o]>array1[j])
+
+                    {
+                        int eo=array1[o];
+                        array1[o]=array1[j];    
+                        array1[j]=eo;
+                    }
+                }
+            }
+            for(o=0;o<y;o++)
+            {
+                Console.WriteLine(array1[o]);
+            }
+
+
+        }
+    }
+}

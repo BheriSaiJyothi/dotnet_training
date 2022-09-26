@@ -1,0 +1,243 @@
+1st
+
+
+using System;
+namespace ConsoleApp1
+{
+    class hwps
+    {
+        static void Main()
+        {
+            string y = "jyothi";
+           
+            try
+            {
+                int i = Convert.ToInt32(y);
+                Console.WriteLine(i);
+            }
+            catch(FormatException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+
+        }
+    }
+}
+
+
+
+2 nd :
+
+
+using System;
+namespace ConsoleApp1
+{
+    class hwps
+    {
+        static void Main()
+        {
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b= Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                Console.WriteLine(a + b);
+                Console.WriteLine(a*b);
+                Console.WriteLine(a-b);
+                Console.WriteLine(a/b);
+            }
+            catch(ArithmeticException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Console.WriteLine(" the arithmetic exception is handled..  ");
+            }
+        }
+    }
+}
+
+
+using System;
+namespace ConsoleApp1
+{
+    public abstract class Order
+    {
+        public int cost;
+        public virtual void ordered()
+        {
+            Console.WriteLine(" the item ordered");
+        }
+        public abstract float food_gst(int here);
+
+    }
+    public class food : Order
+    {
+        public int percentage = 5;
+        public override float food_gst(int cost)
+        {
+            this.cost = cost;
+            float gst = (float)cost * percentage / 100 + cost;
+            return gst;
+        }
+        public override void ordered()
+        {
+            Console.WriteLine(" the food is ordered..");
+        }
+    }
+    public class grocery : Order
+    {
+        int percentage = 10;
+        public override float food_gst(int cost)
+        {
+            this.cost = cost;
+            float gst = (float)cost * percentage / 100 + cost;
+            return gst;
+        }
+        public override void ordered()
+        {
+
+            Console.WriteLine(" the grocery is ordered here.. ");
+
+        }
+    }
+
+    public class clothing : Order
+    {
+        int percentage = 10;
+        public override float food_gst(int cost)
+        {
+            this.cost = cost;
+            float gst = (float)cost * percentage / 100 + cost;
+            return gst;
+        }
+        public override void ordered()
+        {
+            Console.WriteLine("  the clothing is ordered.. ");
+
+3 rd 
+
+
+
+        }
+    }
+    class main1
+    {
+        static void Main()
+        {
+            food h = new food();
+            float a = h.food_gst(366);
+            h.ordered();
+            Console.WriteLine(a);
+            grocery j = new grocery();
+            float y = j.food_gst(366);
+            j.ordered();
+            Console.WriteLine(y);
+            clothing o = new clothing();
+            float t = o.food_gst(366);
+            o.ordered();
+            Console.WriteLine(t);
+        }
+    }
+}
+
+
+
+5 th 
+
+
+using System;
+namespace ConsoleApp1
+{
+
+
+    public abstract class bankaccount
+    {
+
+        public abstract void number_aadhar(int aadhar, int bank_number);
+    }
+    public  class holder1 : bankaccount
+        {
+        public override void number_aadhar(int aadhar, int bank_number)
+    {
+        Console.WriteLine(" the aadhar " + aadhar + " is linked to " + bank_number + " account number");
+    }
+}
+    public class holder2 : bankaccount
+    {
+        public override void number_aadhar(int aadhar, int bank_number)
+        {
+            Console.WriteLine(" the aadhar " + aadhar + " is linked to " + bank_number + " account number");
+        }
+    }
+        class main1
+    {
+        static void Main()
+        {
+            holder1 u = new holder1();
+            u.number_aadhar(1234, 5690);
+            holder2 j = new holder2();
+            j.number_aadhar(2389, 3578);
+
+        }
+    }
+}
+
+
+5 th
+
+
+
+using System;
+namespace ConsoleApp1
+{
+
+
+    public class person
+    {
+        public void fo()
+        {
+            Console.WriteLine(" the person can anything here..  ");
+        }
+
+    }
+    public class librarian : person
+    {
+        public   void give_books(int a)
+        {
+            Console.WriteLine(" the person can take" + a + " books from lirary here");
+        }
+        public  virtual void give_attendance(int j)
+        {
+            Console.WriteLine(" the person has attendance of " + j + " to him");
+        }
+    }
+    public class teacher : librarian
+    {
+        public void take_class()
+        {
+            Console.WriteLine(" the teacher can take class ");
+        }
+
+        
+        public  void take_attendance(int o)
+        {
+            Console.WriteLine(" the person can  attendance of " + o + " to him");
+        }
+
+    }
+    public class student : teacher
+    {
+        
+            static void Main()
+            {
+            student s = new student();
+            s.give_books(56);
+            s.give_attendance(68);
+            s.take_attendance(3);
+
+            }
+    }
+        
+}
+
