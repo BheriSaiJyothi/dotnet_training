@@ -1,0 +1,868 @@
+1st question :
+using System;
+class jyo
+{
+    static void Main(string[] args)
+    {
+        string[] a = new string[3];
+        int i;
+        for(i=0;i<a.Length;i++)
+        {
+            Console.Write("please do enter letter:");
+            a[i]=Console.ReadLine();
+        }
+        for(i=a.Length-1;i>=0; i--)
+        {
+            Console.Write(a[i] + " ");
+        }
+    }
+}
+
+
+
+2nd question:
+
+
+using System;
+class jyo
+{
+    static void Main(string[] args)
+    {
+        int number;
+        int width;
+        int i;
+        int j;
+         Console.Write("please do enter number:");
+         number=Convert.ToInt32(Console.ReadLine());
+          Console.Write("please do enter width:");
+         width=Convert.ToInt32(Console.ReadLine());
+         int ho= width;
+        for(i=0;i<number;i++)
+        {
+            for(j=0;j<ho;j++)
+            {
+                Console.Write("*");
+    
+            }
+            Console.WriteLine();
+            ho=ho-1;
+            
+        }
+        
+    }
+}
+
+3rd question:
+
+using System;
+class jyo
+{
+    static void Main(string[] args)
+    {
+        int id;
+        string password;
+        int h=0;
+        while(h<3)
+        {
+         Console.WriteLine("please do enter your id:");
+         id=Convert.ToInt32(Console.ReadLine());
+          Console.WriteLine("please do enter password:");
+         password=Console.ReadLine();
+         if(id==1212 && password=="jyobheri")
+         {
+             Console.WriteLine("user successfully loggedin");
+             break;
+         }
+         h=h+1;
+         
+        }
+        if(h==3)
+        {
+            Console.WriteLine("user enter incorrect id or password ");
+        }
+        
+    }
+}
+
+
+4th question:
+
+
+using System;
+class jyo
+{
+    static void Main(string[] args)
+    {
+       int a;
+       int z;
+       for(a=-5;a<=5;a++)
+       {
+           z=(a*a)+(5*a)-2;
+           Console.Write(z +"   ");
+       }
+        
+    }
+}
+
+5th question:
+
+using System;
+public class person
+{
+    public string name;
+    public int age;
+    public void setperson(string name, int age)
+    {
+        this.name=name;
+        this.age=age;
+    }
+}
+public class student : person
+{
+    public int rollnumber;
+    public string stream;
+     public void setstudent(int rollnumber , string stream)
+    {
+        this.rollnumber=rollnumber;
+        this.stream=stream;
+    }
+}
+public class employee : person
+{
+    public double salary;
+    public int employeeid;
+     public void setemployee(double salary , int employeeid)
+    {
+        this.salary=salary;
+        this.employeeid=employeeid;
+    }
+}
+public class newone
+{
+    static void Main()
+    {
+        student j1 = new student();
+        j1.setperson("bheri",15);
+        j1.setstudent(1216,"it");
+        
+        
+        employee gy  = new employee();
+        gy.setperson("jyothi",23);
+        gy.setemployee(1245.67,1479);
+        Console.WriteLine("student name is :" + j1.name);
+        Console.WriteLine("student age   is :" + j1.age);
+         Console.WriteLine("student rollno is :" + j1.rollnumber);
+        Console.WriteLine("student stream   is :" + j1.stream);
+        
+         Console.WriteLine("employee salary is :" + gy.salary);
+        Console.WriteLine("employee employeeid   is :" + gy.employeeid);
+         Console.WriteLine("employee name is :" + gy.name);
+        Console.WriteLine("employee age  is :" + gy.age);
+        
+    }
+}
+
+
+using System;
+public abstract class solid
+{
+    public abstract  double volume();
+    public abstract    double surfacearea();
+    public void show()
+    {
+        Console.WriteLine("volume :" + volume());
+        Console.WriteLine("surface area  :" + surfacearea());
+    }
+}
+public class cube : solid
+{
+    double a;
+    public cube(double a)
+    {
+        this.a = a;
+    }
+    public  override double volume(){
+        return (a*a*a);
+        
+    }
+    public override    double surfacearea()
+    {
+        return (6*a*a);
+    }
+}
+public class cuboid : solid
+{
+    double is_length;
+    double is_width;
+    double is_height;
+    public cuboid(double is_length,  double is_width,  double is_height)
+    {
+        this.is_length = is_length;
+        this.is_width = is_width;
+        this.is_height = is_height;
+    }
+    public  override double volume(){
+        return  is_length*  is_width* is_height;
+        
+    }
+    public override    double surfacearea()
+    {
+       return  (2*(is_length*is_width+is_width*is_height +is_length * is_height));
+    }
+}
+public class jyo
+{
+    public static void Main(string[] args)
+    {
+        cube g = new cube(2.36);
+        g.show();
+        cuboid jy = new cuboid(2.34,5.67,8.99);
+        jy.show();
+        
+    }
+}
+
+
+
+Hide the Bank Account number
+Write a function in Python that accepts Your Bank Account number. It should return a string where all the characters are hidden with an asterisk except the last four. For example, if the function gets sent "878375834754", then it should return "4754".
+Input: 123456789
+Output:*****6789
+using System;
+public class jyo
+{
+    public static void Main(string[] args)
+    {
+        
+        string s;
+        s= Console.ReadLine();
+        string f="";
+        int i;
+        for(i=0;i<s.Length-4;i++)
+        {
+            f=f+"*";
+        }
+        while(i<s.Length)
+        {
+            f=f+s[i];
+            i=i+1;
+        }
+        Console.WriteLine(f);
+    
+        
+    }
+    }
+
+
+
+
+using System;
+
+
+
+public class savingsaccount
+{
+    string accno,accholder;
+    double balamt,intrate;
+    
+    internal void openaccount(string name,string num,double amt){
+        accholder = name;
+        accno = num;
+        balamt = amt;
+    }
+    public void credit(double amt){
+        balamt += amt;
+    }
+    public void dedit(double amt){
+        balamt -= amt;
+    }
+    public void showbal(){
+        Console.WriteLine("your balance : "+ balamt);
+    }
+    public void applyint(){
+        balamt += balamt * intrate;
+    }
+    internal void showacc(){
+        Console.WriteLine("account holder name : "+ accholder);
+        Console.WriteLine("account number : "+ accno);
+    }
+    protected internal void closeacc(){
+        accholder = " ";
+        accno = " ";
+        balamt = 0;
+        Console.WriteLine("your account has been closed permanently");
+    }
+    
+    public static void Main(string[] args)
+    {
+        savingsaccount ot = new savingsaccount();
+        ot.openaccount("jyo","1256",12.56);
+        ot.credit(12.45);
+        ot.dedit(12.56);
+        ot.showbal();
+        ot.applyint();
+        ot.showacc();
+        
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MyfirstProject
+{
+    public partial class Form1 : Form
+    {
+        public class Bottle
+        {
+
+
+
+
+
+
+
+            int height,  weight;
+            public Bottle()
+            {
+                height = 20;
+                weight = 2;
+            }
+
+
+            public void Bottle_Height()
+            {
+                int t;
+                for (t = 0; t < 13; t++)
+                {
+
+                    MessageBox.Show("height of the bottle " + height);
+                    height = height + 2;
+                }
+
+            }
+            public void Bottle_Volume()
+            {
+                int t;
+                for (t = 0; t < 13; t++)
+                {
+
+                    MessageBox.Show("weight of the bottle " + weight);
+                    weight = weight + 7;
+                }
+            }
+        }
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Bottle jt = new Bottle();
+            jt.Bottle_Height();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Bottle bottle1 = new Bottle();
+            bottle1.Bottle_Volume();
+        }
+    }
+}
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MyfirstProject
+{
+    public partial class Form1 : Form
+    {
+        public struct employee
+        {
+            public string employeename, dateofjoining;
+            public int salary;
+            public  employee(string name, string date , int salary11)
+            {
+                employeename = name;
+                dateofjoining = date;
+                salary = salary11;
+
+            }
+            public void showemployeedetails()
+            {
+                MessageBox.Show("employee name :" + employeename);
+                MessageBox.Show("date of joining : " + dateofjoining);
+                MessageBox.Show("salary : " + salary);
+            }
+
+
+            
+        }
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            employee y = new employee("jyo", "1115", 1459);
+            y.showemployeedetails();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            employee i = new employee("efuuuf", "1267", 16989);
+            i.showemployeedetails();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            employee o = new employee("krytth", "142689", 155988);
+            o.showemployeedetails();
+        }
+    }
+}
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Mynewproject
+{
+    public partial class Form1 : Form
+    {
+        public struct Student
+        {
+            unsafe string StudentName;
+            int Marks, MaxMarks;
+            public void student(string n, int m, int max)
+            {
+                StudentName = n;
+                Marks = m;
+                MaxMarks = max;
+            }
+            public void ShowStudent()
+            {
+                //unsafe double percent;
+                double percent;
+                percent = (Marks % MaxMarks);
+                unsafe
+                {
+                    MessageBox.Show("Name of Student : " + StudentName);
+                    MessageBox.Show("Percentage : " + percent);
+                }
+            }
+        }
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            unsafe
+            {
+                int* myptr;
+                int myvar = 111;
+                myptr = &myvar;
+                for (int i = 0; i < 3; i++)
+                {
+                    *myptr -= 1;
+                    MessageBox.Show("Second var is : " + *myptr);
+                }
+               
+
+
+                Student ho = new Student();
+                ho.student("jyo", 1214, 5689);
+                ho.ShowStudent();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            unsafe
+            {
+                int* myptr2;
+                int myVar2 = 234;
+                myptr2 = &myVar2;
+                MessageBox.Show("Value stored in 2nd Var is " + *myptr2);
+                for (int i = 0; i < 3; i++)
+                {
+                    *myptr2 -= 1;
+                    MessageBox.Show("Second var is : " + *myptr2);
+                }
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            unsafe
+            {
+
+                int* myptr;
+                int myvar = 111;
+                myptr = &myvar;
+                MessageBox.Show("Address stored in mypointer is" + (uint)myptr);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.IO;
+using System.Reflection;
+using System.Text.RegularExpressions;
+
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            string[] names = new string[2];
+            for(int i = 0; i < names.Length; i++)
+            {
+                names[i] = Console.ReadLine();
+            }
+
+            StreamWriter sw = new StreamWriter("C:\\Users\\saijyothi.bheri\\names.txt");
+       foreach (string s in names)
+               
+        {
+                sw.WriteLine(s);
+            }
+       sw.Close();
+          
+            // Read and show each line from the file.
+            string line = "";
+            
+            StreamReader ho = new StreamReader("C:\\Users\\saijyothi.bheri\\names.txt");
+            StreamWriter sr = new StreamWriter("C:\\Users\\saijyothi.bheri\\g1.txt");
+            
+            while ((line = ho.ReadLine()) != null)
+            {
+                string o = Regex.Match(line, @"\d+").Value;
+                if (Convert.ToInt32(o) > 100)
+                {
+                    sr.WriteLine(line);
+                }
+            }
+            sr.Close();
+        }
+    }
+}
+
+
+
+
+using System;
+using System.IO;
+using System.Reflection;
+using System.Text.RegularExpressions;
+
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            string kr;
+            kr = Console.ReadLine();
+
+            StreamWriter sw = new StreamWriter("C:\\Users\\saijyothi.bheri\\words.txt");
+       foreach (string s in kr.Split())
+               
+        {
+                sw.WriteLine(s);
+            }
+       sw.Close();
+          
+            // Read and show each line from the file.
+           
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+using System;
+using System.IO;
+using System.Reflection;
+using System.Text.RegularExpressions;
+
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            
+
+            StreamReader sw = new StreamReader("C:\\Users\\saijyothi.bheri\\g1.txt");
+            int f = 0;
+            string o = "";
+            while ((o = sw.ReadLine()) != null)
+            {
+                f = f+o.Split().Length-1;
+            }
+       sw.Close();
+            Console.WriteLine(f);
+          
+            // Read and show each line from the file.
+           
+        }
+    }
+}
+
+
+
+
+
+
+
+
+using System;
+using System.IO;
+using System.Reflection;
+using System.Text.RegularExpressions;
+
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            
+
+            StreamReader sw = new StreamReader("C:\\Users\\saijyothi.bheri\\numberofhe.txt");
+            int f = 0;
+            string o = "";
+            while ((o = sw.ReadLine()) != null)
+            {
+                foreach(string s in o.Split())
+                {
+                    if (String.Equals(s, "the"))
+                    {
+                        f = f + 1;
+                    }
+                }
+               
+
+
+            }
+
+            Console.WriteLine(f);
+       sw.Close();
+           
+          
+            // Read and show each line from the file.
+           
+        }
+    }
+}
+
+
+
+
+
+
+
+
+using System;
+using System.IO;
+using System.Reflection;
+using System.Text.RegularExpressions;
+
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            
+
+            StreamReader sw = new StreamReader("C:\\Users\\saijyothi.bheri\\g1.txt");
+            int f = 0;
+            string o = "";
+            while ((o = sw.ReadLine()) != null)
+            {
+                foreach(string s in o.Split())
+                {
+                    f = f +1;
+                }
+               
+
+
+            }
+
+            Console.WriteLine(f);
+       sw.Close();
+           
+          
+            // Read and show each line from the file.
+           
+        }
+    }
+}
+
+
+
+
+
+
+
+using System;
+using System.IO;
+using System.Reflection;
+using System.Text.RegularExpressions;
+
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            
+
+            StreamReader sw = new StreamReader("C:\\Users\\saijyothi.bheri\\words.txt");
+            StreamWriter ko = new StreamWriter("C:\\Users\\saijyothi.bheri\\oedu.txt");
+           
+            string o = "";
+            while ((o = sw.ReadLine()) != null)
+            {
+                foreach (string s in o.Split())
+                {
+
+                    if (s.StartsWith("a") || s.StartsWith("e") || s.StartsWith("i") || s.StartsWith("o") || s.StartsWith("u"))
+                    {
+                        ko.WriteLine(s);
+                    }
+
+
+
+                }      
+               
+
+
+            }
+            sw.Close();
+            ko.Close(); 
+            
+       
+           
+          
+            // Read and show each line from the file.
+           
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+namespace Indexer_example1
+{
+    class Program
+    {
+        class IndexerClass
+        {
+            private string[] names = new string[2];
+            public string this[int i]
+            {
+                get
+                {
+                    return names[i];
+                }
+                set
+                {
+                    names[i] = value;
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            IndexerClass Team = new IndexerClass();
+            Team[0] = "Nisha";
+            Team[1] = "Teena";
+            
+            
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine(Team[i]);
+            }
+            Console.ReadKey();
+        }
+    }
+}
