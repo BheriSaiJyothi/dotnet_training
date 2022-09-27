@@ -1,0 +1,120 @@
+
+1 st 
+
+
+using System;
+using System.Globalization;
+using System.IO;
+using System.Reflection;
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            StreamWriter i = File.AppendText("C:\\Users\\saijyothi.bheri\\oedu.txt");
+            string j;
+          
+            i.WriteLine("hi jyo...");
+            i.WriteLine("bheri is");
+            i.WriteLine("jyo is best here..");
+            i.Close();
+            StreamReader h = new StreamReader("C:\\Users\\saijyothi.bheri\\oedu.txt");
+            while((j=h.ReadLine())!=null)
+            {
+                Console.WriteLine(j);
+            }
+            h.Close();
+        }
+    }
+}
+
+
+2 nd 
+
+
+using System;
+using System.Globalization;
+using System.IO;
+using System.Reflection;
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<string, int> or = new Dictionary<string, int>();
+            or.Add("1216", 1245);
+            or.Add("1278", 1256);
+            or.Add("1488", 3466);
+            foreach(string j in or.Keys)
+            {
+                Console.WriteLine("student id" + j  + " and marks " + or[j]);
+            }
+        }
+    }
+}
+
+
+
+
+
+3 rd :
+
+
+
+
+
+
+
+System;
+using System.Collections.Generic;
+
+namespace    ConsoleApp1
+{
+    public class MyGenericArray<T>
+    {
+        public T[,] array;
+       
+        public MyGenericArray(int size)
+        {
+            array = new T[size + 1,3];
+        }
+        
+        public void setItem(int index, int pf ,  T value)
+        {
+            array[index, pf] = value;
+            
+        }
+        
+        
+    }
+    class Class11
+    {
+        static void Main(string[] args)
+        {
+
+            //declaring an int array
+            MyGenericArray<string> intArray = new MyGenericArray<string>(5);
+
+            //setting values
+            for (int c = 0; c < 5; c++)
+            {
+                intArray.setItem(c,0,Console.ReadLine());
+                intArray.setItem(c,1,Console.ReadLine() );
+                intArray.setItem(c, 2, Console.ReadLine());
+
+
+            }
+
+            //retrieving the values
+            for (int c = 0; c < 5; c++)
+            {
+                Console.WriteLine(intArray.array[c,0] +"," + intArray.array[c,1] +"," + intArray.array[c,2]);
+            }
+
+            
+        }
+    }
+}
+
