@@ -109,14 +109,9 @@ namespace ConsoleApp1
         {
 
             // Anonymous method
-            cal obj = (p, o) =>
-            {
-                int j;
-                j = p;
-                p = o;
-                o = j;
-                Console.WriteLine(p + " " + o);
-            };
+            cal obj = (p, o) => Console.WriteLine(" After swapping value1 = {0} and value2 = {1}", x=(x^y^(y=x)),y);
+        
+          
             
                 //Console.WriteLine("Square = "+ p*p);
                 
