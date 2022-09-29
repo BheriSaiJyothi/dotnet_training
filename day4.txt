@@ -1,0 +1,269 @@
+1 st
+
+git add -A
+2 nd
+
+git commit -a -m “Commit Message”
+
+
+1 st 
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp1
+{
+    public class Class1
+    {
+        static void Main(string[] args)
+        {
+
+            //declaring an int array
+            string i;
+            Console.WriteLine(" enter the name :");
+            i = Console.ReadLine();
+            FileStream y = new FileStream("C:\\Users\\saijyothi.bheri\\" +i, FileMode.Create);
+
+            Console.WriteLine(i);
+
+
+
+
+
+        }
+    }
+}
+
+2 nd 
+
+
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp1
+{
+    public class Class1
+    {
+        static void Main(string[] args)
+        {
+
+            //declaring an int array
+          
+            StreamWriter y = new StreamWriter("C:\\Users\\saijyothi.bheri\\jyothi.txt");
+            
+            int i;
+            while ((i=Convert.ToInt32(Console.ReadLine()))!=3)
+            {
+                string name = Console.ReadLine();
+                int age = Convert.ToInt32(Console.ReadLine());
+                string place = Console.ReadLine();
+                int phone = Convert.ToInt32(Console.ReadLine());
+                y.Write(name +" ");
+                y.Write(age+ " ");
+                y.Write(place+ " ");
+                y.WriteLine(phone);
+            }
+            y.Close();
+
+            
+
+
+
+
+
+        }
+    }
+}
+
+
+3 rd
+
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp1
+{
+    public class Class1
+    {
+        static void Main(string[] args)
+        {
+
+            //declaring an int array
+            string i;
+            Console.WriteLine(" enter the name :");
+            i = Console.ReadLine();
+            Directory.CreateDirectory(i);
+            string t = Console.ReadLine();
+            FileStream y = new FileStream( i +  "\\"+ t , FileMode.Create);
+            string jt;
+            jt = Console.ReadLine();
+            FileStream hi = new FileStream(i+ "\\" + jt, FileMode.Create);
+            string jo = Console.ReadLine();
+            FileStream iy = new FileStream(i + "\\" + jo, FileMode.Create);
+            string ij;
+            ij = Console.ReadLine();
+            FileStream  ii = new FileStream(i + "\\" + ij, FileMode.Create);
+            Console.WriteLine(i);
+
+
+
+
+
+        }
+    }
+}
+
+
+4 th
+
+using System;
+using System.IO;
+using System.Reflection;
+using System.Text.RegularExpressions;
+
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+           
+
+            StreamReader sw = new StreamReader("C:\\Users\\saijyothi.bheri\\jyothi.txt");
+            string go = "";
+            StreamWriter it = new StreamWriter("C:\\Users\\saijyothi.bheri\\newdoc\\copying.txt");
+            while ((go = sw.ReadLine()) != null)
+            {
+                it.WriteLine(go);
+            }
+            it.Close();
+            sw.Close();
+
+            // Read and show each line from the file.
+
+        }
+    }
+}
+
+
+ 5 th
+
+using System;
+using System.IO;
+using System.Reflection;
+using System.Text.RegularExpressions;
+
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+
+            string h = Console.ReadLine();
+            string go = "";
+            try
+            {
+                StreamReader sw = new StreamReader("C:\\Users\\saijyothi.bheri\\newdoc\\" + h);
+
+               
+                while ((go = sw.ReadLine())!=null)
+                {
+                    Console.WriteLine(" the i " + go);
+                }
+                int e = Convert.ToInt32(Console.ReadLine());
+                int t = 3/e;
+                Console.WriteLine(t);
+                sw.Close();
+                int u = int.Parse(sw.ReadLine());
+                Console.WriteLine(u);
+            }
+           
+            catch(FileNotFoundException e)
+            {
+                Console.WriteLine(e.ToString());
+
+            }
+            catch(ObjectDisposedException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            catch (ArithmeticException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+
+
+            // Read and show each line from the file.
+
+        }
+    }
+}
+
+
+
+
+6 th
+
+
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Reflection;
+using System.Text.RegularExpressions;
+
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            
+            string y = Console.ReadLine();
+          
+            try
+            {
+               
+                FileStream r = new FileStream("C:\\Users\\saijyothi.bheri\\"  +y+ "\\file2.txt", FileMode.Open, FileAccess.Read);
+                    Console.WriteLine(" the directory exists jyo..");
+             string  h = Console.ReadLine();
+                FileStream gu = new FileStream("C:\\Users\\saijyothi.bheri\\" + y + "\\" +h, FileMode.Open, FileAccess.Read);
+                Console.WriteLine(" file exists jyo");
+                r.Close();
+                gu.Close();
+               
+                
+            }
+            
+          
+            catch (DirectoryNotFoundException io)
+            {
+                Console.WriteLine(io.ToString());
+                Console.WriteLine(" the directory not exists jyo..");
+            }
+           
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine(e.ToString());
+
+            }
+           
+
+
+            // Read and show each line from the file.
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
