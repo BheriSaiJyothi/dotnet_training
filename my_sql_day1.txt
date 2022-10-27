@@ -1,0 +1,107 @@
+1 st
+
+create table employee12(
+  name varchar(42) ,
+  id int ,
+  city varchar(42) ,
+  organisation varchar(42) ,
+  age int);
+  
+  insert into employee12 VALUES ('jyo',12,'peravaram' , 'IT' , 12);
+   insert into employee12 VALUES ('jyothi',67,'rajahmundry' , 'IT' , 56);
+    insert into employee12 VALUES ('bheri',58,'hyderabad' , 'IT' , 62);
+     insert into employee12 VALUES ('sivabheri',12,'peravaram' , 'IT' , 12);
+      insert into employee12 VALUES ('moni',38,'rajahmundry' , 'ECE' , 12);
+       insert into employee12 VALUES ('jyobheri',24,'peravaram' , 'IT' , 15);
+    insert into employee12 VALUES ('bherijyothi',12,'india' , 'IT' , 58);
+    
+    
+    
+    select distinct  city from employee12 where organisation = 'IT' ;
+2 nd
+
+
+ create table cricket_player
+    (
+      name varchar(42)  NOT NULL,
+      country varchar(42)  NOT NULL,
+      id int ,
+      primary key (name , country )
+      );
+    drop table cricket_player;  
+select * from cricket_player;
+
+insert into cricket_player values ('jyo' , 'india' , 12);
+insert into cricket_player VALUES('bheri' ,'', 14);
+INSERT INto cricket_player VALUES ('jyothi', 'ameria ' , 82);
+insert into cricket_player VALUES('','',18);
+
+insert into cricket_player values ('jyo','japan' , 18);
+insert into cricket_player values ('jyothibherijyothi' , 'america' , 29);
+insert into cricket_player values ('jyo' , 'india' ,92);
+insert into cricket_player values ('jyo' , 'america' ,92);
+select name,country from cricket_player;
+
+
+3 rd 
+
+create table students (
+  name varchar(42),
+  id int ,
+  subject varchar(42) ,
+  date_of_joining date 
+  );
+  
+  select * from students;
+
+insert into students values ('jyo' , 12 , 'maths' , '2001-07-12');
+insert into students values ('jyothi' , 14, 'telugu' ,'2001-04-18');
+insert into students values ('bheri' , 22 , 'physics' , '2008-08-12');
+insert into students values ('jyobheri' , 26, 'telugu' ,'2004-10-12');
+insert into students values ('jyothijyothi' , 34 , 'physics' , '2001-07-12');
+insert into students values ('jyothiei' , 28, 'physics' ,'2001-06-26');
+insert into students values ('bherigo' , 243 , 'physics' , '2008-08-22');
+insert into students values ('jyobherisi' , 92, 'telugu' ,'2002-07-12');
+insert into students values ('bheri' , 22 , 'physics' , '1994-02-17');
+insert into students values ('bheri' , 22 , 'physics' , '1992-08-12');
+
+delete from students;
+ drop table students;
+select name,id,date_of_joining,subject      from students where subject= 'physics' and date_of_joining>'2001-07-01';
+
+
+4 th
+
+
+create table student1 (
+  name varchar(42),
+  rollno int , 
+  subject varchar(42) ,
+  age int 
+  );
+  
+  create table student2 (
+  name varchar(42),
+  rollno int , 
+  subject varchar(42) ,
+  age int 
+  );
+  
+  select * from student1;
+  select * from student2;
+  INSERT into student1 VALUES ('jyo' , 122, 'telugu' , 16);
+  insert into student1 VALUES ('jyothi',268, 'maths' ,19);
+  insert into student1 VALUES ('bheri' , 146 , 'maths' , 28);
+  insert into student1 VALUES ('jyobheri' , 1822 , 'science' , 24);
+  
+  
+  INSERT into student2 VALUES ('jyo12' , 122, 'telugu' , 16);
+  insert into student2 VALUES ('jyothi1234' , 268 , 'maths', 19);
+  insert into student2 VALUES ('bheri12345' , 146 , 'maths' , 28);
+  insert into student2 VALUES ('jyobheri12568' , 1822 , 'maths' , 24);
+   insert into student2 VALUES ('bheri' , 146 , 'maths' , 28);
+  
+select * from student1 where subject = 'maths'  and age>21 union  select * from student2  where subject = 'maths'  and age>21;
+
+
+

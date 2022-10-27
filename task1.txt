@@ -1,0 +1,108 @@
+I st one
+// See https://aka.ms/new-console-template for more information
+using System;
+using System.IO;
+namespace ConsoleApp3
+{
+    public class Task1
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World");
+            StreamReader y = new StreamReader("C:\\Users\\saijyothi.bheri\\numberofhe.txt");
+            string jo;
+            while ((jo = y.ReadLine()) != null)
+            {
+                Console.WriteLine(jo);
+            }
+            y.Close();
+            StreamReader to = new StreamReader("C:\\Users\\saijyothi.bheri\\jyothi.txt");
+            StreamWriter go = new StreamWriter("C:\\Users\\saijyothi.bheri\\task1.txt");
+            string kr;
+            while ((kr = to.ReadLine()) != null)
+            {
+                go.WriteLine(kr);
+            }
+            to.Close();
+            go.Close();
+        }
+    }
+}
+
+
+
+2 nd
+
+using System;
+using System.Diagnostics;
+using System.IO;
+
+
+
+namespace ConsoleApp3
+{
+    class Task1
+    {
+        public static void Main()
+        {
+            string jo;
+            Console.WriteLine(" enter the name :");
+            jo = Console.ReadLine();
+            Directory.CreateDirectory(jo);
+            string t = Console.ReadLine();
+            FileStream y = new FileStream(jo + "\\" + t, FileMode.Create);
+            string jt;
+            Console.WriteLine(" enter the name :");
+            string ji = Console.ReadLine();
+            Directory.CreateDirectory(ji);
+            jt = Console.ReadLine();
+            FileStream hi = new FileStream(ji + "\\" + jt, FileMode.Create);
+            string jfile1 = jo + "\\" + t;
+            string jfile2 = ji + "\\" + jt;
+            
+            Console.WriteLine(" enter the name :");
+            string go = Console.ReadLine();
+            Directory.CreateDirectory(go);
+            string ki = Console.ReadLine();
+
+
+            y.Close();
+            hi.Close();
+            StreamWriter jy = new StreamWriter(go + "\\" + ki);
+            StreamReader jhi = new StreamReader(jfile1);
+            string jot;
+            while((jot=jhi.ReadLine()) != null)
+            {
+                jy.WriteLine(jot);
+            }
+
+
+
+
+            // Ensure that the target does not exist.
+
+            jy.Close();
+            jhi.Close();
+            // Move the file.
+           
+            System.IO.File.Copy(jfile2, jfile1 , true);
+             
+                System.IO.File.Copy(go + "\\" +ki , jfile2 , true);
+
+
+                // See if the original exists now.
+
+                
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

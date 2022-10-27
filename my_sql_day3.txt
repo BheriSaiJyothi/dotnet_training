@@ -1,0 +1,199 @@
+1 st  
+
+create table name1 (
+         id int ,
+         firstname varchar(42) ,
+         lastname varchar(42) ,
+         section varchar(42) 
+         );
+         insert into name1 values ( 2592 , 'jyo' ,'bheri' , 'telugu'); 
+         insert into name1 values ( 2222, 'siva' ,'bheri' , 'maths'); 
+         insert into name1 values ( 5322, 'jyothi' ,'aa' , 'biology'); 
+         insert into name1 values (222222 , 'jyobheri' , 'ei' , 'science ');
+         insert into name1 values (226622 , 'sita' , 'rj ' , 'english');
+         insert into name1 values (5228832494937822 , 'rama' , 'i o ' , 'telugu ' );
+         
+         select    firstname || lastname           as fullname from name1;
+
+
+2 nd 
+
+
+create table employee12(
+  name varchar(42) ,
+  id int ,
+  city varchar(42) ,
+  organisation varchar(42) ,
+  age int);
+  
+  insert into employee12 VALUES ('jyo',12,'peravaram' , 'IT' , 12);
+   insert into employee12 VALUES ('jyothi',67,'rajahmundry' , 'IT' , 56);
+    insert into employee12 VALUES ('bheri',58,'hyderabad' , 'IT' , 62);
+     insert into employee12 VALUES ('sivabheri',12,'peravaram' , 'IT' , 12);
+      insert into employee12 VALUES ('moni',38,'rajahmundry' , 'ECE' , 12);
+       insert into employee12 VALUES ('jyobheri',24,'peravaram' , 'IT' , 15);
+    insert into employee12 VALUES ('bherijyothi',12,'india' , 'IT' , 58);
+
+
+ select name , organisation from employee12 order by name ,organisation desc ;
+
+
+
+
+
+
+
+
+3 rd  
+
+create table my_city (
+           name varchar(42) ,
+           id int 
+           );
+           
+           insert into my_city values ('peravaram' , 1222);
+           insert into my_city values ('rajahmundry' , 1262);
+           insert into my_city values ('ap' , 1242);
+           insert into my_city VALUES ('india' , 12882 );
+           insert into my_city VALUES ('peravaram ' , 12642);
+           
+           select substr(name , 0 , 4) from my_city ;
+ 
+
+4 th
+
+
+create table employees1242 (
+              name varchar(42) ,
+             id int ,
+             salary int ,
+             section varchar(42) 
+             );
+             
+             insert into employees1242 VALUES ('jyo' , 122 , 46994 ,'Telugu');
+             INSERT into employees1242 VALUES ('bheri' , 1242 , 62734,'maths' );
+                 Insert into employees1242 values ('jyothi' , 1252 , 62222 , 'science' );
+                 insert into employees1242 VALUES ('jyo12' , 23262 ,222222 , 'telugu' );
+                 
+                 select * from employees1242 where salary > 50000 and salary <80000    
+
+5 th
+
+
+create table students (
+  name varchar(42),
+  id int ,
+  subject varchar(42) ,
+  date_of_joining date 
+  );
+  
+  select * from students;
+
+insert into students values ('jyo' , 12 , 'maths' , '2001-07-12');
+insert into students values ('jyothi' , 14, 'telugu' ,'2001-04-18');
+insert into students values ('bheri' , 22 , 'physics' , '2008-08-12');
+insert into students values ('jyobheri' , 26, 'telugu' ,'2004-10-12');
+insert into students values ('jyothijyothi' , 34 , 'physics' , '2001-07-12');
+insert into students values ('jyothiei' , 28, 'physics' ,'2001-06-26');
+insert into students values ('bherigo' , 243 , 'physics' , '2008-08-22');
+insert into students values ('jyobherisi' , 92, 'telugu' ,'2002-07-12');
+insert into students values ('bheri' , 22 , 'physics' , '1994-02-17');
+insert into students values ('bheri' , 22 , 'physics' , '1992-08-12');
+
+ select * from students where subject not in ('maths' , 'physics' );    
+
+
+
+
+6 th
+
+
+
+
+
+ create table employees1242 (
+              name varchar(42) ,
+             id int ,
+             salary int ,
+             section varchar(42) 
+             );
+             
+             insert into employees1242 VALUES ('jyo' , 122 , 46994 ,'Telugu');
+             INSERT into employees1242 VALUES ('bheri' , 1242 , 62734,'maths' );
+                 Insert into employees1242 values ('jyothi' , 1252 , 62222 , 'science' );
+                 insert into employees1242 VALUES ('jyo12' , 23262 ,222222 , 'telugu' );
+                 insert into employees1242 VALUES ('jyo1222' , 122 , 387652 ,'Telugu');
+             INSERT into employees1242 VALUES ('jyo1242' , 1242 , 62734,'maths' );
+                 Insert into employees1242 values ('jyo1282' , 1252 , 62222 , 'science' );
+                 insert into employees1242 VALUES ('jyo12422' , 23262 ,222222 , 'telugu' );
+                 insert into employees1242 VALUES ('jyo222222' , 122 , 46994 ,'Telugu');
+             INSERT into employees1242 VALUES ('jyo28422' , 1242 , 62734,'maths' );
+                 Insert into employees1242 values ('jyo1642' , 1252 , 222822 , 'science' );
+                 insert into employees1242 VALUES ('jyo22254622824292428246342' , 23262 ,222222 , 'telugu' );
+                   select *  from   employees1242 order by   salary ;  
+
+
+
+
+
+
+7 th
+
+
+create table any_city (
+ id int ,
+  name varchar(42) ,
+  value varchar(42) 
+  );
+  
+  create table any_country (
+    id int ,
+    name varchar(42)
+    );
+    
+    insert into any_city VALUES (12,'peravaram' ,'jyo');
+    insert into any_city VALUES (14 , 'rajahmundry' ,'bheri');
+    insert into any_city VALUES (12, 'yeleswaram' ,'jyothi');
+    insert into any_city VALUES (12 ,'siripuram', 'jyosiva');
+    insert into any_city VALUES (12 ,'ramavaram', 'jyo1222222');
+    insert into any_city VALUES (14 , 'jaggampeta' ,'jyo12');
+    insert into any_city VALUES (16,'ap','jyo1242');
+    insert into any_city VALUES (12 , 'jyothi' ,'jyo128342');
+    insert into any_city VALUES (16, 'kakinada' ,'jyo22262');
+    insert into any_city VALUES (18 ,'pera1', 'jyo12222');
+    insert into any_city VALUES (18 ,'jyo1', 'jyo25422');
+    insert into any_city VALUES (12 , 'jyobheri121' , 'jyo22426222222');
+    
+    insert into any_country VALUES (12, 'india');
+    insert into any_country VALUES (14,'america');
+    insert into any_country VALUES (16, 'japan');
+    insert into any_country VALUES (18 , 'italy');
+    drop table any_city;                                
+       select value,any_city.id,any_country.name from any_city join any_country on any_city.id = any_country.id where any_country.name ='india';          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                

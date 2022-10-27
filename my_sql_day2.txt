@@ -1,0 +1,127 @@
+1 st
+
+create table CUSTOMERS (
+  cus_id int primary key ,
+  name varchar(42) ,
+  address varchar(42) ,
+  tel int ,
+  email12 email
+  );
+  
+   create table items 
+   (
+      item_id int primary key  ,
+     name varchar(42) ,
+     price int 
+     );
+     
+     create table orders
+     ( order_id int primary key ,
+      customer_id int ,
+      date1 datetime ,
+      FOREIGN KEY (customer_id) REFERENCES customers(cus_id)
+      );
+      
+      create table order_item
+      (
+         order_item_id int ,
+        order_id int ,
+        item_id int ,
+        product_quantity int ,
+        FOREIGN KEY (order_id) REFERENCES orders(order_id) ,
+        FOREIGN KEY (item_id) REFERENCES items(item_id)
+        );
+        
+        drop table items;
+        drop table orders;
+        drop table order_item;
+        
+        insert into CUSTOMERS VALUES (12, 'jyo ' , 'peravram ' , 1256, 'jyothiheri2gmail.com');
+        insert into CUSTOMERS VALUES (34, 'bheri ' , 'peravram ' , 1482, 'hi@gmail.com');
+        insert into CUSTOMERS VALUES (26 , 'jyothi ' , 'rajahmundry ' , 1242 , 'r@gmail.com');
+        insert into CUSTOMERS VALUES (18 , 'jyobheri' , 'peravaram' , 1222, 'ho@gmail.com');
+        delete from  orders;
+        insert into orders VALUES (14,12,'2001-07-12 14:15:12.23');
+        INSERT into orders VALUES (12,78,'2002-07-12 23:56:12.28');
+        
+        insert into items VALUES (12, 'jyo' , 1256);
+        insert into items VALUES (68 , 'bheri' , 1242);
+        insert into items values (62 , 'jyothi' , 1222);
+        insert into items values (22 , 'jyothi' , 1222);
+        
+        
+        insert into order_item VALUES (12,34,78,12);
+        insert into order_item VALUES (22 , 28 , 34 , 45);
+        insert into order_item VALUES (14, 62  ,  48, 122);
+        INSERT into order_item values (22 , 82 , 12 , 212 );
+    
+
+
+
+
+ 2 nd 
+
+
+
+    
+        create table student12 (
+           name varchar(42) ,
+          marks int ,
+          u_subject varchar(42)
+         
+          );
+          
+          insert into student12 values ('jyo',  167 , 'telugu');
+          insert into student12 VALUES ('bheri' , 222 ,'maths');
+          insert into student12 values ('jyothi' , 222,'maths');
+          insert into student12 VALUES ('jyo' , 156 , 'maths');
+          insert into student12 values ('jyo' ,182 , 'telugu');
+          insert into student12 VALUES ('bheri' , 282,'telugu');
+          insert into student12 VALUES ('bheri' , 262 ,'maths');
+          insert into student12 values ('jyothi' , 676,'telugu');
+          insert into student12 values ('jyothi' , 2322,'maths');
+          
+          select max(marks) ,u_subject ,  name from student12    group by   u_subject  , name order by u_subject ;
+          
+ 
+
+3 rd       
+
+
+create table telephone_1 (
+      name varchar(42) ,
+      id int ,
+      tel_number int ,
+      address varchar(42) ,
+      profession varchar(42) 
+      );
+      
+      insert into telephone_1 values ( 'jyo' , 12 , 5678 , 'peravaram' , 'student');
+      insert into telephone_1 VALUES ('bheri' , 1468 , 4522 , 'rajahmundry ' , 'engineer');
+      insert into telephone_1 values ('jyothi' , 1422, 62222 , 'india ' , 'student');
+      insert into telephone_1 VALUES ('jyobheri ' , 1492 , 45822 , 'peravaram ' , 'engineer ');
+      insert into telephone_1 VALUES ('jyothijyothi' , 1222 , 56522 , 'america ' , 'engineer');
+      insert into telephone_1 values ( 'rama' , 23822 , 782222 , 'peravaram' , 'teacher');
+      insert into telephone_1 VALUES ('sita' , 2226622 , 8688223022 , 'andhra pradesh' , 'student');
+      insert into telephone_1 values ('jyoo' , 1422, 62222 , 'india ' , 'student');
+      insert into telephone_1 VALUES ('priya ' , 1256 , 2222252 , 'peravaram' , 'student');
+      insert into telephone_1 VALUES ('niharika' , 1222 , 56522 , 'america ' , 'doctor');
+      insert into telephone_1 values ( 'jyo1' , 12 , 5678 , 'peravaram' , 'student');
+      insert into telephone_1 VALUES ('jyo12' , 1468 , 4522 , 'rajahmundry ' , 'engineer');
+      insert into telephone_1 values ('jyo122' , 1422, 62222 , 'india ' , 'student');
+      insert into telephone_1 VALUES ('jyo12222' , 1492 , 45822 , 'peravaram ' , 'engineer ');
+      insert into telephone_1 VALUES ('jyo124' , 1222 , 56522 , 'america ' , 'engineer');
+      insert into telephone_1 values ( 'jyo122222' , 23822 , 782222 , 'peravaram' , 'teacher');
+      insert into telephone_1 VALUES ('jyo1282' , 2226622 , 8688223022 , 'andhra pradesh' , 'student');
+      insert into telephone_1 values ('jyo1292' , 1422, 62222 , 'india ' , 'student');
+      insert into telephone_1 VALUES ('jyo222222222' , 1256 , 2222252 , 'peravaram' , 'student');
+      insert into telephone_1 VALUES ('jyo248242' , 1222 , 56522 , 'america ' , 'doctor');
+      
+      select count(name) from telephone_1 where profession = 'student' ;
+      select count(name) from telephone_1 where profession = 'engineer' ;
+    
+
+
+
+
+
