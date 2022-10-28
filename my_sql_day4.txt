@@ -1,0 +1,125 @@
+1 st  
+create table employee (
+name varchar(42) ,
+id int ,
+language varchar(42) ,
+location varchar(42) 
+);
+
+select * from employee
+
+drop table employee
+
+insert into employee values ('jyo' ,12,'python' ,'hyderabad');
+insert into employee values ('bheri' , 17 ,'java' ,'peravaram');
+insert into employee values ('jyothi' ,14 , 'c' , 'bangalore');
+insert into employee values ('siva' ,15, 'c' , 'bangalore');
+insert into employee values ('rama' , 16 , 'python' , 'hyderbad');
+insert into employee values ('sita'  , 122 , 'c' , 'bangalore');
+insert into employee values ('moni' , 13 , 'python' , 'hyderabad');
+insert into employee values ('niharika' , 1222 , 'python' , 'hyderabad');
+alter  procedure j1 
+as
+begin
+select * from employee where language = 'c'  and location = 'bangalore'  ;
+end
+
+execute j1;
+
+2 nd  
+create table students (
+name varchar(42) ,
+my_id int ,
+maths int , 
+economics int  ,
+commerce int,
+english int ,
+computerscience int 
+);
+
+drop table students;
+insert into students values ('jyo' , 12 , 48 , 26 , 42 , 36 , 22);
+insert into students values ('jyothi' , 44 , 32 , 25 , 48  ,  28 , 42);
+insert into students values ('bheri'  , 14 , 36 , 22 , 45 , 38 , 26  );
+insert into students values ('siva' , 16 , 25 , 39 , 42, 24 , 28);
+insert into students values ('rama', 18 , 26 , 46 , 35, 48 , 24);
+insert into students values ('sita' , 22 , 46 , 24 , 38 , 43 , 48);
+insert into students values ('moni' , 24 , 48 , 35 , 29 , 36 , 36  );
+insert into students values ('niharika' , 26 , 24 , 49 , 35 , 38 , 42);
+insert into students values ('annapurna' , 28 , 14, 24 , 39 , 47 , 24 );
+insert into students values ('sumangali  ' , 32 , 28 , 36 , 46 , 42 , 26 );
+select * from students;
+create   procedure j2      as
+begin
+
+select name , my_id , maths , economics , commerce , english , computerscience ,  maths+economics+commerce + english + computerscience as total , ROW_NUMBER()   
+OVER (ORDER BY total) AS s_rank   from students;
+end;
+
+execute j2   
+
+3 rd 
+
+
+create procedure j3 @a int as
+begin
+create table student1 ( name  varchar(42 ) , id int , age int , gender varchar(42) , course varchar(42) , join_year int );
+insert into student1 values ('jyo' , 22 , 16 , 'female' , 'IT' , 1);
+insert into student1 values ('jyothi' , 12 ,14, 'female' , 'IT' , 2);
+insert into student1 values ('bheri' , 14 ,16, 'male' , 'cse' , 1);
+insert into student1 values ('siva' , 16 ,46, 'male' , 'ece' ,1);
+insert into student1 values ('rama' , 18 ,124, 'male' , 'IT' , 1);
+insert into student1 values ('sita' , 20 ,24,'female' ,'mec' , 2);
+INSERT into student1 values ('moni ' ,28 , 26, 'female' , 'IT' ,1);
+insert into student1 values ('niharika' , 24 ,28 , 'female' ,'IT' ,1);
+select * from student1 where join_year = @a;
+end;
+execute j3 1
+
+
+4 th
+create function calculate (@o as  int , @j as  int , @y as  int , @h as  varchar(42))
+returns float
+as 
+begin
+
+declare   @value  as  float
+
+
+if (@h='checkaccount') 
+begin
+set @value = (@o*@j* @y) * 5 * 0.01 ;
+end 
+else
+begin
+set @value =(@o*@j*@y)*0.01;
+end
+return @value
+end 
+
+
+select dbo.calculate(22,2,2,'savingsaccount');
+select dbo.calculate(22,4,92, 'checkaccount') as jyothi;
+select dbo.calculate(2222,12,12 , 'savingsaccount')
+
+5 th
+
+
+create function getup(@j as varchar(42))
+
+returns varchar(42) 
+as
+begin
+declare @o as varchar(42) 
+if (@j ='dubai')
+set @o = '5 am';
+else if (@j = 'uk')
+set @o = '6 a m';
+else
+ set @o = '7 a m ' ;
+ return @o
+ end 
+ select dbo.getup('utc');
+ select dbo.getup('uk');
+
+
